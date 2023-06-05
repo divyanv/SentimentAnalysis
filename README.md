@@ -142,7 +142,29 @@ This command will install all the dependencies listed in the `requirements.txt` 
 6. **Run the project**: You are now ready to run the sentiment analysis project! Execute the main script or notebook file to perform sentiment analysis on the ["Amazon Fine Food Reviews" ](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) dataset.
 
 ## Configuration
-(will be updating this)
+
+The following configurations can be modified in the project:
+
+1. **Dataset Configuration**: Place the downloaded dataset in a directory within the project. Ensure that the file names and formats are consistent with the code's expectations.
+
+2. **Model Configuration**: The LSTM model with Word2Vec embeddings can be customized by adjusting the following parameters in the code:
+   - Embedding size
+   - LSTM layer size
+   - Optimizer
+
+3. **Training Configuration**: Modify the training-related configurations such as:
+   - Batch size
+   - Number of epochs
+   - Early stopping criteria
+
+4. **Preprocessing Configuration**: Customize the text preprocessing steps, such as using a different stop word list or adjusting the threshold for rare word removal, by modifying the  `preprocess_text()` and `process_text()` helper functions accordingly.
+
+5. **Hardware Configuration**: The code supports GPU acceleration if available. Ensure that the necessary GPU drivers are installed to take advantage of GPU training. 
+
+(Alternatively, you can utilize cloud-based GPU instances for faster training.)
+
+6. **Output and Visualization Configuration**: The project generates various outputs and visualizations, such as training accuracy and loss plots, and a confusion matrix. Customize the plot sizes, color maps, and visualization styles in the code.
+
 
 ---
 <div align="center">
@@ -382,7 +404,18 @@ In conclusion, training an NLP sentiment analysis model using the Amazon Fine Di
 
 </div>
 
-(will update soon)
+**Results:**
+- The dataset was successfully loaded and preprocessed, including tokenization, lowercasing, and removal of special characters and numbers.
+- Sentiment scores were calculated for each text using the VADER sentiment analyzer, and the scores were mapped to positive, negative, and neutral sentiments based on a threshold.
+- The text sequences were converted to numerical sequences and padded to ensure uniform length.
+- The LSTM model with Word2Vec embeddings was trained on the dataset, achieving a certain accuracy and loss on the training and validation sets.
+- The evaluation metrics, including accuracy, precision, recall, and F1-score, were calculated on the test set, and a confusion matrix was generated to visualize the model's performance.
+
+**Conclusion:**
+- The sentiment analysis task successfully classified the sentiment of the given texts into positive, negative, and neutral categories.
+- The LSTM model with Word2Vec embeddings demonstrated its effectiveness in capturing the semantic meaning of words and achieving reasonable accuracy in sentiment prediction.
+- The evaluation metrics and confusion matrix provide insights into the model's performance and can guide further improvements or applications of sentiment analysis in real-world scenarios.
+
 
 
 
